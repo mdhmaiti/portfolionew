@@ -9,7 +9,7 @@ const Ball = () => {
       <Canvas>
         <Suspense fallback={<Loading />}>
           <OrbitControls enableZoom={false} />
-          <ambientLight intensity={1} />
+          <ambientLight intensity={2} />
           <directionalLight position={[3, 2, 1]} />
           <Sphere args={[1, 100, 200]} scale={2.4}>
             <MeshDistortMaterial
