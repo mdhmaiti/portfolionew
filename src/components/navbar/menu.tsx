@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import MyImg from "../ball/MyImg"
 
 
 
@@ -62,7 +63,7 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -73,7 +74,8 @@ export function NavigationMenuDemo() {
                   >
                  
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      <MyImg/>
+                      Medhashis Maiti
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Beautifully designed components built with Radix UI and
@@ -85,10 +87,10 @@ export function NavigationMenuDemo() {
               <ListItem href="/" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href="/docs/installation" title="Skills">
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href="/docs/primitives/typography" title="Education.">
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
@@ -111,9 +113,9 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/about" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About me
+              Home
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
