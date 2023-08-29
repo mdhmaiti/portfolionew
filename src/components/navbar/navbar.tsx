@@ -1,20 +1,23 @@
-import { FC } from "react";
+
 import { NavigationMenuDemo } from "@/components/navbar/menu";
 import { ModeToggle } from "@/components/navbar/toggle-light-dark";
 
-interface navbarProps {}
-
-const Navbar: FC<navbarProps> = ({}) => {
+function Navbar() {
   return (
-    <nav className="flex justify-center items-center m-5">
-      <div>
+ 
+      
+      <nav className="flex justify-between mx-10 my-10 ">
+      
         <NavigationMenuDemo />
-      </div>
-      <div className="ml-auto">
+      
+  
+      
         <ModeToggle />
-      </div>
+      
     </nav>
+   
+    
   );
-};
+}
 
 export default Navbar;

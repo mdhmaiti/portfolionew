@@ -1,19 +1,15 @@
-"use client";
-
 import React, { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
-
-import { useTexture } from "@react-three/drei";
-
-//import * as THREE from "three";
-
+import { useTexture, Stars } from "@react-three/drei";
+import THREE, { MeshStandardMaterial } from "three";
+import { DoubleSide } from "three";
 interface BallProps {
   scale: number;
   ambientLightIntensity: number;
-  color?: string;
-  distort: number;
-  speed: number;
+  color: string;
+  
+  
   rotationX: number;
   rotationY: number;
   rotationZ: number;
@@ -24,24 +20,18 @@ interface ballsize {
   divStyling: string;
   size: number;
   light: number;
-  distortion: number;
-  distortionSpeed: number;
-
+  
   image: string;
-  color?: string;
-
-  rotaion: [rotationX: number, rotationY: number, rotationZ: number];
+  color: string;
+  rotation: [rotationX: number, rotationY: number, rotationZ: number];
 }
-//""
 
 function Dcene(props: BallProps) {
-  //const colorMap = useLoader(texture, 'cat-4008202_1280.png')
-
-  //(imag:string)=>{}
   const [hasImage, setHasImage] = useState(false);
-
-  //const texture = props.image ? useTexture(props.image) : null;
-  const texture = useTexture<string>(props.image);
+  const texture = useTexture(props.image);
+  const cloud = useTexture("8k_earth_clouds.jpg");
+  const spectacularMap = useTexture("8k_earth_specular_map.jpg");
+  const normalMap = useTexture("8k_earth_normal_map.jpg");
   const mesh = useRef<THREE.Mesh>(null!);
 
   useFrame(() => {
@@ -55,26 +45,61 @@ function Dcene(props: BallProps) {
   return (
     <mesh ref={mesh}>
       <Suspense fallback={null}>
+        
+        {props.image === "8k_earth_nightmap.jpg" && (
+          <Stars radius={100} depth={50} count={500} factor={4} />
+        )}
         <OrbitControls enableZoom={false} />
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={props.ambientLightIntensity} />
         <directionalLight position={[3.6, 2.4, 1]} />
-
-        <Sphere args={[1, 100, 200]} scale={props.scale}>
-          <MeshDistortMaterial
-            map={texture}
-            color={props.color}
-            attach="material"
-            distort={props.distort}
-            speed={props.speed}
+       
+        <pointLight color={props.color} position={[-5, 2, 0]} intensity={4} />
+        {props.image === "8k_earth_nightmap.jpg" && (
+          <Stars
+          radius={300}
+          depth={60}
+          count={2000}
+          factor={7}
+          saturation={0}
+          fade={true}
+        /> 
+        )}
+      
+      <mesh >
+        <sphereGeometry args={[1.005, 100, 200]} />
+        <meshPhongMaterial
+          map={cloud}
+          opacity={0.4}
+          depthWrite={true}
+          transparent={true}
+          side={DoubleSide}
+        />
+      </mesh>
+      <mesh >
+        <sphereGeometry args={[1, 100, 200]} />
+        <meshPhongMaterial specularMap={spectacularMap} />
+        <meshStandardMaterial
+          map={texture}
+          normalMap={normalMap}
+          metalness={0.4}
+          roughness={0.7}
+        />
+         <OrbitControls
+          enableZoom={true}
+          enablePan={true}
+          enableRotate={true}
+          zoomSpeed={0.6}
+          panSpeed={0.5}
+          rotateSpeed={0.4}
+         
           />
-        </Sphere>
+      </mesh>
       </Suspense>
     </mesh>
   );
 }
 
 const Ball = (propss: ballsize) => {
-  //const texture = useTexture<string>("./img/cat-4008202_1280.png")
   return (
     <section className={propss.divStyling}>
       <Canvas>
@@ -83,11 +108,10 @@ const Ball = (propss: ballsize) => {
           image={propss.image}
           scale={propss.size}
           ambientLightIntensity={propss.light}
-          distort={propss.distortion}
-          speed={propss.distortionSpeed}
-          rotationX={propss.rotaion[0]}
-          rotationY={propss.rotaion[1]}
-          rotationZ={propss.rotaion[2]}
+          
+          rotationX={propss.rotation[0]}
+          rotationY={propss.rotation[1]}
+          rotationZ={propss.rotation[2]}
         />
       </Canvas>
     </section>

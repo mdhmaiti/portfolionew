@@ -1,25 +1,18 @@
+import AnimatedText from "@/components/AnimatedText/AnimatedText"
+import Earth from "@/components/ball/Earth"
+import Navbar from "@/components/navbar/navbar"
 
-import Ball from "@/components/ball/Ball";
-
-export default function Home() {
+const Home =()=>{
   return (
-
-  
-  <main className="flex flex-col h-screen w-screen">
-   <div className="absolute -z-20 h-full w-full">
-  {/* messy ball structure */}
-  <Ball image={"paper-texture.jpg"}color={"#736878"} size={2.8} light={1} distortion={0.5} distortionSpeed={2} divStyling={"h-screen w-full"} rotaion={[0.00, 0.00, 0.00]}   />
-  </div>
-  {/* <Navbar/>  */}
-{/* react moon */}
-<Ball divStyling={"flex h-20 w-full"} size={2.7} light={1} distortion={0} distortionSpeed={0} image={"react-2.svg"} rotaion={[0.005,0.005,0.005]}/>
-{/* earth */}
-<Ball divStyling={"flex h-screen w-full"} size={3} light={4} distortion={0} distortionSpeed={0} image={"earth.jpg"} rotaion={[0.003,0.003,0.003]}/>
-
-
-
-</main>
-
-);
+    <main>
+      <Navbar/>
+   <div className="flex items-center justify-center h-50  font-semibold text-3xl text-center md:text-6xl z-10">
+     <div className=" md:w-3/6 opacity-50 drop-shadow-md "><AnimatedText text={" Hi, I am Medhashis, a web developer."}/> </div>
+      
+   </div> 
+      <Earth />
+    
+    </main>
+  )
 }
-  
+export default Home

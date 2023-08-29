@@ -3,9 +3,9 @@ export default function MyImg(){
 
   return (
 <Image className="  rounded-full object-cover"
-src="/cat-2536662_1280.jpg"
+src="/gmail-linkdin-twitter.jpg"
 width={200}
-height={200}
+height={600}
 alt="Picture of the author"
 />
   )
