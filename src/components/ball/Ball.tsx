@@ -1,6 +1,7 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import { useTexture, Stars } from "@react-three/drei";
 import THREE, { MeshStandardMaterial } from "three";
 import { DoubleSide } from "three";
@@ -27,20 +28,47 @@ interface ballsize {
 }
 
 function Dcene(props: BallProps) {
-  const [hasImage, setHasImage] = useState(false);
+  //const [hasImage, setHasImage] = useState(false);
   const texture = useTexture(props.image);
   const cloud = useTexture("8k_earth_clouds.jpg");
   const spectacularMap = useTexture("8k_earth_specular_map.jpg");
   const normalMap = useTexture("8k_earth_normal_map.jpg");
   const mesh = useRef<THREE.Mesh>(null!);
+  
+  //const cameraDistance = useRef<number>(0);
+  const controlsRef = useRef<OrbitControlsImpl>(null);
+  //const cameraRef = useRef<THREE.Camera>(null!);
+
+
+
+
 
   useFrame(() => {
     if (mesh.current) {
       mesh.current.rotation.x += props.rotationX;
       mesh.current.rotation.y += props.rotationY;
       mesh.current.rotation.z += props.rotationZ;
+
+      
     }
+
+    // if (cameraRef.current) {
+    //   cameraDistance.current = cameraRef.current.position.length();
+    //   if (cameraDistance.current < 1 || cameraDistance.current > 1000) {
+    //     if (controlsRef.current) {
+    //       controlsRef.current.enabled = false; // Disable controls
+    //     }
+    //   } else {
+    //     if (controlsRef.current) {
+    //       controlsRef.current.enabled = true; // Enable controls
+    //     }
+    //   }
+    // }
+
+
+
   });
+
 
   return (
     <mesh ref={mesh}>
@@ -49,11 +77,11 @@ function Dcene(props: BallProps) {
         {props.image === "8k_earth_nightmap.jpg" && (
           <Stars radius={100} depth={50} count={500} factor={4} />
         )}
-        <OrbitControls enableZoom={false} />
+        
         <ambientLight intensity={props.ambientLightIntensity} />
         <directionalLight position={[3.6, 2.4, 1]} />
        
-        <pointLight color={props.color} position={[-5, 2, 0]} intensity={4} />
+        <pointLight color={props.color} position={[1,3,5]} intensity={10} />
         {props.image === "8k_earth_nightmap.jpg" && (
           <Stars
           radius={300}
@@ -85,13 +113,15 @@ function Dcene(props: BallProps) {
           roughness={0.7}
         />
          <OrbitControls
+           ref={controlsRef}
           enableZoom={true}
           enablePan={true}
           enableRotate={true}
           zoomSpeed={0.6}
           panSpeed={0.5}
           rotateSpeed={0.4}
-         
+          minDistance={1.15}   
+          maxDistance={800} 
           />
       </mesh>
       </Suspense>
