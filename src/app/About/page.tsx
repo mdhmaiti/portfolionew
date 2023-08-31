@@ -1,3 +1,7 @@
+
+
+// about section 
+
 import Head from "next/head";
 import {
   Card,
@@ -11,27 +15,28 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { Button } from "@/components/ui/button";
 
 const page = () => {
+  //cards details
   const cardsData = [
     {
-      title: "Card 1 Title",
-      description: "Card 1 Description",
-      content: "Card 1 Content",
-      footer: "Card 1 Footer",
+      title: "Introduction",
+      description: " A brief description. ",
+      content: "I am a recent graduate in web development from India. I am passionate about learning new technologies and building innovative solutions. I am currently diving into the world of full stack development, but I am also open to exploring new tech domains. I am active on Hashnode and Twitter, where I occasionally write blogs to share my knowledge. I am available for onsite, remote, and hybrid jobs.",
+      footer: "Mail: medhashis000@gmail.com.\n Linkdin: see in the contacts.",
     },
     {
-      title: "Card 2 Title",
-      description: "Card 2 Description",
-      content: "Card 2 Content",
-      footer: "Card 2 Footer",
+      title: "Skills",
+      description: "A brief description of what I know and what I am learnig.",
+      content: "I am a full stack developer. I am capable of building both the front end and the back end.My tech stack MERN ( Mongo db ,Express ,React ,Node js ),NEXT JS ,Typescript,Javascript . I also use a state management Library RECOIL and capable of using the hooks. I use Git as a version control system . I use the VS Code with the WSL 2(Ubuntu).I am still learning the CI/CD and how to properly containerize an app and deploy both the front end and backend on AWS",
+      footer: "... updating. check git hub in contact section for projects for now .",
     },
     {
-      title: "Card 3 Title",
-      description: "Card 3 Description",
-      content: "Card 3 Content",
+      title: "Education",
+      description: "history",
+      content: " Bootcamps: \n1. Web development by Angela Yu. \n2. TypeScript ,Next Js , Recoil and others from Harkirat Singh course .\n Degree: \nElectonics and communication from Burdwan University. (2023 graduate).\nSchool: \nJogamaya Memorial Institute ( ICSE and ISC boards ) ",
       footer: "Card 3 Footer",
     },
   ];
-
+    // card components
   return (
     <div>
       <Head>
@@ -57,10 +62,24 @@ const page = () => {
               <CardDescription>{card.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>{card.content}</p>
+            <div className="whitespace-pre-line">
+                {/* Render content with \n for new lines */}
+                {card.content.split('\n').map((item, itemIndex) => (
+                  <p key={itemIndex} className="mb-2">
+                    {item}
+                  </p>
+                ))}
+              </div>
             </CardContent>
             <CardFooter>
-              <p>{card.footer}</p>
+            <div className="whitespace-pre-line">
+                {/* Render content with \n for new lines */}
+                {card.footer.split('\n').map((item, itemIndex) => (
+                  <p key={itemIndex} className="mb-2">
+                    {item}
+                  </p>
+                ))}
+              </div>
             </CardFooter>
           </Card>
         ))}
