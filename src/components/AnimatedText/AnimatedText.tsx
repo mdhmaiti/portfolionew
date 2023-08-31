@@ -9,7 +9,7 @@ interface props {
 const AnimatedText = (prop: props) => {
   const sentence = prop.text.split("");
   return (
-    <div>
+    <div >
       {sentence.map((letter, index) => {
         return (
           <JumpingTextSpan key={index}>

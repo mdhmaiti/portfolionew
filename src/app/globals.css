@@ -58,6 +58,8 @@
     @apply border-border;
   }
   body {
+    margin: 0;
+    
     @apply bg-background text-foreground;
   }
 }

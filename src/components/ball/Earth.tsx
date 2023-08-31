@@ -23,7 +23,7 @@ const Earth = () => {
       <Ball
         divStyling="h-screen w-full "
         size={2.4}
-        light={1.5}
+        light={1.8}
         color={"#ebebb7"}
         image={image} // Use the dynamically updated image URL
         rotation={[0.0005, 0.0001, 0.0008]}
