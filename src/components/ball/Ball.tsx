@@ -121,7 +121,7 @@ function Dcene(props: BallProps) {
           panSpeed={0.5}
           rotateSpeed={0.4}
           minDistance={1.15}   
-          maxDistance={800} 
+          maxDistance={100} 
           />
       </mesh>
       </Suspense>
