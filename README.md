@@ -11,6 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - build using the shad cn ui and tailwind.
 - uses the framer motion for the animation .
 - for the 3d animation i used the react three fibre .
+- in the dark mode and the light mode the earth is different .this is a good example of the use state.
 
 ## Getting Started
 
