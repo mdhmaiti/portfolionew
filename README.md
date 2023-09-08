@@ -1,4 +1,16 @@
+# Portfolio site
+
+portfolio site deployed link [portfolio](https://portfolio-first-one.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Basic things
+
+- totally build using the next js and ts .
+- used the resuable components.
+- build using the shad cn ui and tailwind.
+- uses the framer motion for the animation .
+- for the 3d animation i used the react three fibre .
 
 ## Getting Started
 
