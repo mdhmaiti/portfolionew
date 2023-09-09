@@ -20,42 +20,42 @@ import MyImg from "../ball/MyImg"
 
 
 
- const components: { title: string; href: string; description: string }[] = [
+ const components: { title: string; href: string; description: string; }[] = [
   {
     title: "Linkdin",
-    href: "/docs/primitives/alert-dialog",
+    href: "https://www.linkedin.com/in/medhashis-maiti-3197881a8/",
     description:
-      "Linkdin jksdghjsh",
+      "Linkdin profile.",
   },
   {
     title: "Github",
-    href: "/docs/primitives/hover-card",
+    href: "https://github.com/mdhmaiti",
     description:
-      "dfjkgdrjkhgdj",
+      "Github link for the projects. ",
   },
   {
-    title: "Hashnode",
-    href: "/docs/primitives/progress",
+    title: " Blog-Hashnode",
+    href: "https://medhashis.hashnode.dev",
     description:
-      "jkghdhgdifjhi",
+      "Occasionally write blog articles on hashnode.",
   },
   {
     title: "Twitter",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    href: "https://twitter.com/medhashis",
+    description: "tweet",
   },
   {
     title: "email",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—.",
+    href: "/mail",
+    
+    description: " address : medhashis000@gmail.com. ph no :- 8013381433",
   },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays mouse hovers over it.",
-  },
+  // {
+  //   title: "Tooltip",
+  //   href: "/docs/",
+  //   description:
+  //     "A popup that displays mouse hovers over it.",
+  // },
 ]
 
 export function NavigationMenuDemo() {
@@ -78,20 +78,19 @@ export function NavigationMenuDemo() {
                       Medhashis Maiti
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                    Please feel free to contact me if you would like to learn more about my work.
                     </p>
                   </Link>
                 </NavigationMenuLink>
               </li>
               <ListItem href="/About" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+                  Self motivated and passionate about development.
               </ListItem>
-              <ListItem href="/About" title="Skills">
-                How to install dependencies and structure your app.
+              <ListItem href="/About" title="Skills / Projects">
+                Always learning and growing. For more projects click on git hub under contact section.
               </ListItem>
               <ListItem href="/About" title="Education.">
-                Styles for headings, paragraphs, lists...etc
+                Education History.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -105,7 +104,10 @@ export function NavigationMenuDemo() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  
+                  
                 >
+                  
                   {component.description}
                 </ListItem>
               ))}
