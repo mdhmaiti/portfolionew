@@ -13,7 +13,7 @@ export default function Mail() {
 
   return (
       <div className='flex  flex-col items-center justify-center h-full'>
-         <div className="flex items-center justify-center w-full h-50 py-4 font-semibold text-3xl text-center  md:text-6xl z-10">
+         <div className="flex items-center justify-center w-full h-50 py-4 font-semibold text-3xl text-center  md:text-6xl ">
         <div className=" md:w-3/6   ">
           <AnimatedText text={" Mail"} />
         </div>
