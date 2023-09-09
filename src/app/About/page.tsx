@@ -36,6 +36,17 @@ const page = () => {
       footer: "Card 3 Footer",
     },
   ];
+
+  // onclick function 
+  const resumeURL = 'https://drive.google.com/file/d/1-FVvIpocdurdhmyOG6Z7JaUZ3NqPVabr/view?usp=drive_link'; // Replace with your actual resume URL
+
+  const handleClick = () => {
+    // Trigger the link when the button is clicked
+    window.location.href = resumeURL;
+  };
+
+
+
     // card components
   return (
     <div>
@@ -46,7 +57,7 @@ const page = () => {
       <div className="flex items-center justify-center w-full h-50 py-4 font-semibold text-3xl text-center text-slate-400 md:text-6xl z-10">
         <div className=" md:w-3/6 drop-shadow-md shadow-slate-800 ">
           <AnimatedText text={" About Me ."} />
-          <Button >Resume</Button>
+          <Button  onClick={handleClick} >Resume</Button>
         </div>
       </div>
        <div className="flex flex-col justify-justify-center items-center w-full my-5 space-y-10 ">
