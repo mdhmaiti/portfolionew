@@ -94,7 +94,7 @@ function Dcene(props: BallProps) {
         )}
       
       <mesh >
-        <sphereGeometry args={[1.005, 32, 32]} />
+        <sphereGeometry args={[1.005, 64, 128]} />
         <meshPhongMaterial
           map={cloud}
           opacity={0.4}
@@ -104,7 +104,7 @@ function Dcene(props: BallProps) {
         />
       </mesh>
       <mesh >
-        <sphereGeometry args={[1, 32, 32]} />
+        <sphereGeometry args={[1, 64, 128]} />
         <meshPhongMaterial specularMap={spectacularMap} />
         <meshStandardMaterial
           map={texture}

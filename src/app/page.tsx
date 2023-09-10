@@ -16,11 +16,7 @@ const Home = ()=>{
      <div className=" md:w-3/6  "><AnimatedText text={" Hi, I am Medhashis, a web developer."}/> </div>
       
    </div> 
-   {/* <Suspense fallback={<p>Loading weather...</p>}>
-        <Weather />
-      </Suspense> */}
-        
-       {/* <Earth /> */}
+ 
        <ServerComponent/>
 
       
