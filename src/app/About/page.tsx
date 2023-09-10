@@ -26,15 +26,15 @@ const page = () => {
     },
     {
       title: "Skills",
-      description: "A brief description of what I know and what I am learnig.",
+      description: "A brief description of what I know and what I am learning.",
       content: "I am a full stack developer. I am capable of building both the front end and the back end.My tech stack MERN ( Mongo db ,Express ,React ,Node js ),NEXT JS ,Typescript,Javascript . I also use a state management Library RECOIL and capable of using the hooks. I use Git as a version control system . I use the VS Code with the WSL 2(Ubuntu).I am still learning the CI/CD and how to properly containerize an app and deploy both the front end and backend on AWS",
-      footer: "... updating. check git hub in contact section for projects for now .",
+      footer: "check git hub in contact section for projects for now .",
     },
     {
       title: "Education",
       description: "history",
       content: " Bootcamps: \n1. Web development by Angela Yu. \n2. TypeScript ,Next Js , Recoil and others from Harkirat Singh course .\n Degree: \nElectonics and communication from Burdwan University. (2023 graduate).\nSchool: \nJogamaya Memorial Institute ( ICSE and ISC boards ) ",
-      footer: "Card 3 Footer",
+      footer: "",
     },
   ];
 

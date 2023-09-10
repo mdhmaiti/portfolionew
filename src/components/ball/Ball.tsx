@@ -81,7 +81,7 @@ function Dcene(props: BallProps) {
         <ambientLight intensity={props.ambientLightIntensity} />
         <directionalLight position={[3.6, 2.4, 1]} />
        
-        <pointLight color={props.color} position={[1,3,5]} intensity={10} />
+        <pointLight color={props.color} position={[1,3,5]} intensity={5} />
         {props.image === "8k_earth_nightmap.jpg" && (
           <Stars
           radius={300}
@@ -94,7 +94,7 @@ function Dcene(props: BallProps) {
         )}
       
       <mesh >
-        <sphereGeometry args={[1.005, 100, 200]} />
+        <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial
           map={cloud}
           opacity={0.4}
@@ -104,7 +104,7 @@ function Dcene(props: BallProps) {
         />
       </mesh>
       <mesh >
-        <sphereGeometry args={[1, 100, 200]} />
+        <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial specularMap={spectacularMap} />
         <meshStandardMaterial
           map={texture}
@@ -121,19 +121,20 @@ function Dcene(props: BallProps) {
           panSpeed={0.5}
           rotateSpeed={0.4}
           minDistance={1.15}   
-          maxDistance={100} 
+          maxDistance={15} 
           />
       </mesh>
       </Suspense>
     </mesh>
   );
 }
+const DceneMemo = React.memo(Dcene);
 
-const Ball = (propss: ballsize) => {
+const Ball =  (propss: ballsize) => {
   return (
     <section className={propss.divStyling}>
       <Canvas>
-        <Dcene
+        <DceneMemo
           color={propss.color}
           image={propss.image}
           scale={propss.size}
