@@ -1,10 +1,14 @@
 import AnimatedText from "@/components/AnimatedText/AnimatedText"
-import Earth from "@/components/ball/Earth"
+//import Earth from "@/components/ball/Earth"
 import Navbar from "@/components/navbar/navbar"
 import { Suspense } from "react"
 import Loading from "./Loading"
+import dynamic from 'next/dynamic'
 
-const  Home = ()=>{
+// Server Component:
+const ServerComponent = dynamic(() => import('../components/ball/Earth'))
+
+const Home = ()=>{
    return (
     <main>
       {/* <Navbar/> */}
@@ -16,7 +20,8 @@ const  Home = ()=>{
         <Weather />
       </Suspense> */}
         
-       <Earth />
+       {/* <Earth /> */}
+       <ServerComponent/>
 
       
     

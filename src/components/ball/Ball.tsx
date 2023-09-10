@@ -120,8 +120,8 @@ function Dcene(props: BallProps) {
           zoomSpeed={0.6}
           panSpeed={0.5}
           rotateSpeed={0.4}
-          minDistance={1.15}   
-          maxDistance={15} 
+          minDistance={1.5}   
+          maxDistance={6} 
           />
       </mesh>
       </Suspense>
