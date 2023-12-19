@@ -3,6 +3,7 @@
 // about section 
 
 import Head from "next/head";
+import { Metadata } from 'next'
 import {
   Card,
   CardContent,
@@ -14,6 +15,11 @@ import {
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import { Button } from "@/components/ui/button";
 import Resurl from "@/components/resumeUrl/resurl";
+
+export const metadata: Metadata = {
+  title: 'About page',
+  description: "Medhashis"
+}
 
 const page = () => {
   //cards details
@@ -42,10 +48,7 @@ const page = () => {
     // card components
   return (
     <div>
-      <Head>
-        <title>profile | About page</title>
-        <meta name="description" content="any description" />
-      </Head>
+      
       <div className="flex items-center justify-center w-full h-50 py-4 ">
         
           <AnimatedText className=" md:w-3/6 drop-shadow-lg glow-text font-semibold text-3xl text-center  text-slate-400 md:text-6xl" text={" About Me ."} />

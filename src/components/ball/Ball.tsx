@@ -97,7 +97,7 @@ function Dcene(props: BallProps) {
           metalness={0.4}
           roughness={0.7}
         />
-         <OrbitControls
+         {/* <OrbitControls
            ref={controlsRef}
           enableZoom={true}
           enablePan={true}
@@ -107,7 +107,15 @@ function Dcene(props: BallProps) {
           rotateSpeed={0.4}
           minDistance={1.5}   
           maxDistance={6} 
-          />
+          /> */}
+          <OrbitControls
+  ref={controlsRef}
+  enableZoom={false}  // Set to false to disable zoom
+  enablePan={false}   // Set to false to disable pan
+  enableRotate={false} // Set to false to disable rotate
+  minDistance={3}      // Set the minimum distance
+  maxDistance={3}      // Set the maximum distance
+/>
       </mesh>
       </Suspense>
     </mesh>

@@ -20,7 +20,7 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
         {...props}
       >
         {sentence.map((letter, index) => (
-          <JumpingText key={index} >
+          <JumpingText key={index} className=" hover:text-cyan-300 glow-text" >
             {letter === " " ? "\u00A0" : letter}
           </JumpingText>
         ))}
