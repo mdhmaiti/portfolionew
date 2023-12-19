@@ -35,7 +35,7 @@ const Home = () => {
         <div className="flex flex-row justify-center item-center space-x-5  ">
        <Link className="glow hover:text-cyan-400" href=" https://github.com/mdhmaiti"><Github /></Link> 
        <Link className="glow hover:text-cyan-400" href="https://www.linkedin.com/in/medhashis-maiti-3197881a8/"><Linkedin /></Link>
-       <Link  className="glow hover:text-cyan-400" href="mailto:medhashis000@gmail.com"><Mail /></Link>
+       <Link  className="glow hover:text-cyan-400" href="/mail"><Mail /></Link>
        <Link  className="glow hover:text-cyan-400" href="https://medhashis.hashnode.dev"><Album /></Link>
 
 
