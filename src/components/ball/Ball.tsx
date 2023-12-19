@@ -52,21 +52,6 @@ function Dcene(props: BallProps) {
       
     }
 
-    // if (cameraRef.current) {
-    //   cameraDistance.current = cameraRef.current.position.length();
-    //   if (cameraDistance.current < 1 || cameraDistance.current > 1000) {
-    //     if (controlsRef.current) {
-    //       controlsRef.current.enabled = false; // Disable controls
-    //     }
-    //   } else {
-    //     if (controlsRef.current) {
-    //       controlsRef.current.enabled = true; // Enable controls
-    //     }
-    //   }
-    // }
-
-
-
   });
 
 

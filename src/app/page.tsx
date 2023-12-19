@@ -1,28 +1,22 @@
-import AnimatedText from "@/components/AnimatedText/AnimatedText"
-//import Earth from "@/components/ball/Earth"
-import Navbar from "@/components/navbar/navbar"
-import { Suspense } from "react"
-import Loading from "./Loading"
-import dynamic from 'next/dynamic'
+import AnimatedText from "@/components/AnimatedText/AnimatedText";
 
-// Server Component:
-const ServerComponent = dynamic(() => import('../components/ball/Earth'))
+import EarthComponent from "@/components/ball/EarthComponent";
 
-const Home = ()=>{
-   return (
+const Home = () => {
+  return (
     <main>
       {/* <Navbar/> */}
-   <div className="flex items-center justify-center h-50  font-semibold text-3xl text-center text-slate-400 md:text-6xl z-10 ">
-     <div className=" md:w-3/6  "><AnimatedText text={" Hi, I am Medhashis, a web developer."}/> </div>
-      
-   </div> 
- 
-       <ServerComponent/>
+      <div className="flex flex-col  h-full   ">
+        <div className=" w-full  ">
+          <AnimatedText
+            className=" text-slate-400 font-semibold text-3xl text-center glow-text md:text-6xl z-10 "
+            text={" Hi, I am Medhashis, a web developer."}
+          />{" "}
+        </div>
 
-      
-    
-    
-   </main>
-  )
-}
-export default Home
+        <EarthComponent />
+      </div>
+    </main>
+  );
+};
+export default Home;

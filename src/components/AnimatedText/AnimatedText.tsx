@@ -1,57 +1,70 @@
-"use client";
-import { motion, transform, useAnimationControls } from "framer-motion";
-import React from "react";
+"use client"
+import * as React from "react";
+import { motion, useAnimationControls, HTMLMotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-interface props {
+
+// perfect way to use the reusable react components
+interface AnimatedTextProps extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
 }
-// it just took the letter
-const AnimatedText = (prop: props) => {
-  const sentence = prop.text.split("");
-  return (
-    <div >
-      {sentence.map((letter, index) => {
-        return (
-          <JumpingTextSpan key={index}>
+
+const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
+  ({ text, className, ...props }, ref) => {
+    const sentence = text.split("");
+
+    return (
+      <div
+        ref={ref}
+        className={cn("", className)} 
+        {...props}
+      >
+        {sentence.map((letter, index) => (
+          <JumpingText key={index} >
             {letter === " " ? "\u00A0" : letter}
-          </JumpingTextSpan>
-        );
-      })}
-    </div>
-  );
-};
+          </JumpingText>
+        ))}
+      </div>
+    );
+  }
+);
+AnimatedText.displayName = "AnimatedText"
+
 export default AnimatedText;
 
-//animnations of the jumping text
+interface JumpingTextProps extends HTMLMotionProps<"span"> {
+  children: React.ReactNode;
+}
 
-const JumpingTextSpan = ({ children }: { children: React.ReactNode }) => {
+const JumpingText = React.forwardRef<HTMLSpanElement, JumpingTextProps>(
+  ({ children, className, ...props }, ref) => {
+    const controls = useAnimationControls();
 
-const controls = useAnimationControls();
+    const rubber = () => {
+      controls.start({
+        transform: [
+          "scale3d(1,1,1)",
+          "scale3d(1.4,0.55,1)",
+          "scale3d(0.75,1.25,1)",
+          "scale3d(1.25,0.85,1)",
+          "scale3d(0.9,1.05,1)",
+          "scale3d(1,1,1)",
+        ],
+      });
+    };
 
-  const rubber = () => {
-    controls.start({
-      transform: [
-        "scale3d(1,1,1)",
-        "scale3d(1.4,0.55,1)",
-        "scale3d(0.75,1.25,1)",
-        "scale3d(1.25,0.85,1)",
-        "scale3d(0.9,1.05,1)",
-        
-        "scale3d(1,1,1)",
-      ],
-    });
-  };
+    return (
+      <motion.span
+        ref={ref}
+        className={cn("inline-block ", className)}
+        animate={controls}
+        onMouseOver={rubber}
+        {...props}
+      >
+        {children}
+      </motion.span>
+    );
+  }
+);
+JumpingText.displayName = "JumpingText"
 
-  return (
-    <motion.span className="inline-block" 
-    animate ={controls}
-     onMouseOver={() => rubber()}>
-      {children}
-    </motion.span>
-  );
-};
-
-//{/* <div className="flex items-center justify-center h-screen  font-semibold text-3xl text-center md:text-6xl z-10">
-    //  <div className=" md:w-3/6 opacity-50 drop-shadow-md "><AnimatedText text={" Hi, I am Medhashis, a web developer."}/> </div>
-      
-   // </div> */}

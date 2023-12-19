@@ -46,17 +46,17 @@ const page = () => {
         <title>profile | About page</title>
         <meta name="description" content="any description" />
       </Head>
-      <div className="flex items-center justify-center w-full h-50 py-4 font-semibold text-3xl text-center text-slate-400 md:text-6xl z-10">
-        <div className=" md:w-3/6 drop-shadow-md shadow-slate-800 ">
-          <AnimatedText text={" About Me ."} />
-          <Resurl/>
-        </div>
+      <div className="flex items-center justify-center w-full h-50 py-4 ">
+        
+          <AnimatedText className=" md:w-3/6 drop-shadow-lg glow-text font-semibold text-3xl text-center  text-slate-400 md:text-6xl" text={" About Me ."} />
+          {/* <Resurl/> */}
+        
       </div>
        <div className="flex flex-col justify-justify-center items-center w-full my-5 space-y-10 ">
         {cardsData.map((card, index) => (
           <Card
             key={index}
-            className="drop-shadow-md shadow-slate-400 w-9/12 md:w-5/12 py-2 "
+            className="shadow-md shadow-slate-400 w-9/12 md:w-5/12 py-2 "
           >
             <CardHeader>
               <CardTitle>

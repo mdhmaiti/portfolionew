@@ -3,7 +3,7 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText"
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Ball from '@/components/ball/Ball';
-import Navbar from '@/components/navbar/navbar';
+
 
 const Earth = () => {
   const [image, setImage] = useState<string>('8k_earth_daymap.jpg');
