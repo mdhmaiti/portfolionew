@@ -14,10 +14,11 @@ import {
 import { Button } from "../ui/button";
 
 
+
 const navItems = [
   { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "Projects", url: "/Projects" },
-  { id: 3, title: "About", url: "/About" },
+  { id: 2, title: "Projects", url: "/#Projects" },
+  { id: 3, title: "About", url: "/#About" },
   
   
 ];
@@ -58,19 +59,12 @@ const MobMenu = () => {
              {item.title}
               </Button>
             </div>
+           
           </Link>
         ))}
-
-      {/* if not user render the sign in button and if user render the sign out */}
-        <Link href={"/"}>
-          <Button
-            className="text-slate-100 text-xl font-medium "
-            variant="ghost"
-          >
-            
-          </Button>
-        </Link>
+    
       </div>
+      
     </div>
   );
 };

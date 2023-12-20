@@ -1,10 +1,14 @@
 import { ThemeProvider } from "@/components/navbar/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
+import EarthComponent from "@/components/ball/EarthComponent";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Medhashis Maiti",
@@ -18,13 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-transparent to-sky-600`}>
+      <body className={`${roboto.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen min-w-screen ">
             
         
     <Navbar />
-  
+    <div className=" fixed inset-0 w-full -z-20">
+          <EarthComponent />
+        </div>
 
             <div className="flex-1">{children}</div>
           </div>

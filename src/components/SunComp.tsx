@@ -2,10 +2,10 @@ import React from 'react'
 
 const SunComp = () => {
   return (
-    <div>{/* Sun SVG */}
+    <div className='-z-10 p-10'>{/* Sun SVG */}
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 28 28 "
+      viewBox="0 0 32 32 "
       fill="none"
       stroke="#f8d347"
       strokeWidth="2"

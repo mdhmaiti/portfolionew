@@ -1,4 +1,4 @@
-import AnimatedText from "@/components/AnimatedText/AnimatedText"
+
 "use client"
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
