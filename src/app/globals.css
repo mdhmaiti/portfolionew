@@ -141,6 +141,18 @@
 .skill-list > li {
   @apply bg-slate-400 shadow-md shadow-slate-200 rounded p-2 text-center;
 }
-
+.loadingPage {
   
+  @apply flex flex-col h-screen justify-center items-center text-4xl ;
+  animation: blink 10s ease-in-out; 
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0; 
+  }
+  
+}
 }

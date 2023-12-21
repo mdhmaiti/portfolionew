@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 import Navbar from "@/components/navbar/Navbar";
 import EarthComponent from "@/components/ball/EarthComponent";
+import LoadingComp from "@/components/LoadingComp";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,8 +27,12 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen min-w-screen ">
             
-        
+          <div className="fixed w-full inset-0 -z-50">
+    <LoadingComp/>
+    </div>
     <Navbar />
+    
+    
     <div className=" fixed inset-0 w-full -z-20">
           <EarthComponent />
         </div>
