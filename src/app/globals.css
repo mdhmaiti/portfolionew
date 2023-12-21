@@ -144,7 +144,7 @@
 .loadingPage {
   
   @apply flex flex-col h-screen justify-center items-center text-4xl ;
-  animation: blink 10s ease-in-out; 
+  animation: blink 10s ease-in-out 5; 
 }
 @keyframes blink {
   0%, 100% {
@@ -155,4 +155,6 @@
   }
   
 }
+  
 }
+
