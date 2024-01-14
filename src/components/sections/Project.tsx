@@ -20,26 +20,23 @@ const Project = () => {
 
             <CardContent className="flex flex-row justify-center">
               <Image
-                src="/gmail-linkdin-twitter.jpg"
-                width={100}
-                height={100}
+                src="/groceryonlineprofile.jpg"
+                width={200}
+                height={200}
                 alt="my pic"
-                className="rounded-full"
+                className="rounded-md aspect-square object-contain "
               />
             </CardContent>
-            <CardFooter>
+            <CardFooter className = " flex flex-col gap-2">
               <p className="font-semibold">
-                Ecommerce app build with latest tech stack. The documentation is also included on how to build this in the readme section.
+                Ecommerce app build with next js, tailwind css react js, postgreSQL, docker, Prisma, Node js, react query, Shadcn UI, react hook forms etc.
               </p>
+              <p className="font-semibold text-red-500"> <a href="https://groceryonline.vercel.app" target="_blank">click for live demo</a></p>
             </CardFooter>
             <Icons />
           </Card>
 
-          {/* Card 2 */}
-          {/* Repeat the Card structure for the remaining cards */}
-          {/* ... */}
-
-          {/* Card 3 */}
+        
           <Card className="p-5 sm:w-40 md:w-96 flex flex-col justify-center bg-transparent backdrop-blur-sm shadow-lg shadow-slate-400">
             {/* ... */}
             <CardTitle className="flex flex-row justify-center p-4">
@@ -49,16 +46,17 @@ const Project = () => {
             <CardContent className="flex flex-row justify-center">
               <Image
                 src="/gmail-linkdin-twitter.jpg"
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 alt="my pic"
-                className="rounded-full"
+                className="rounded-md"
               />
             </CardContent>
-            <CardFooter>
+            <CardFooter className = " flex flex-col gap-2">
               <p className="font-semibold">
-                Built with  next js server actions, clerk authentication etc.
+                Built with next js server actions and clerk authentication.
               </p>
+              <p className="font-semibold text-red-500"> click for live demo</p>
             </CardFooter>
             <Icons />
           </Card>
@@ -73,40 +71,42 @@ const Project = () => {
             <CardContent className="flex flex-row justify-center">
               <Image
                 src="/gmail-linkdin-twitter.jpg"
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 alt="my pic"
                 className="rounded-full"
               />
             </CardContent>
-            <CardFooter>
+            <CardFooter className = " flex flex-col gap-2">
               <p className="font-semibold">
-                A simple web app that makes qr code 
+                A simple qr code generator
               </p>
+              <p className="font-semibold text-red-500"> click for live demo</p>
             </CardFooter>
             <Icons />
           </Card>
 
-          {/* Card 5 */}
+ 
           <Card className="p-5 sm:w-40 md:w-96 flex flex-col justify-center bg-transparent backdrop-blur-sm shadow-lg shadow-slate-400">
-            {/* ... */}
+        
             <CardTitle className="flex flex-row justify-center p-4">
               <AnimatedText text={" TODO"} />
             </CardTitle>
 
             <CardContent className="flex flex-row justify-center">
               <Image
-                src="/gmail-linkdin-twitter.jpg"
-                width={100}
-                height={100}
+                src="/todo.jpg"
+                width={200}
+                height={200}
                 alt="my pic"
-                className="rounded-full"
+                className="rounded-md"
               />
             </CardContent>
-            <CardFooter>
+            <CardFooter className = " flex flex-col gap-2">
               <p className="font-semibold">
-               A Todo app tutorial built with vite and type script which expains why do we need state management library.
+                Todo app with typescript, vite, shadcn UI , tailwind css.
               </p>
+              <p className="font-semibold text-red-500"> <a href="https://glittery-torte-487d9f.netlify.app" target="_blank">click for live demo</a></p>
             </CardFooter>
             <Icons />
           </Card>
