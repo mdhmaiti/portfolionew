@@ -7,8 +7,9 @@ import EarthComponent from "@/components/ball/EarthComponent";
 import LoadingComp from "@/components/LoadingComp";
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: "400"
+  subsets: ["latin-ext"],
+  weight: "400",
+  preload:true,
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className}`}>
+      <body className={`${roboto.className} bg-gradient-to-r  from-sky-950 ` }>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen min-w-screen ">
             

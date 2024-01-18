@@ -1,5 +1,5 @@
 import { Press_Start_2P } from "next/font/google";
-import Image from "next/image";
+
 import { About } from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import Cube from "@/components/Cube";
@@ -12,9 +12,10 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText";
 //correct way of using fonts in next js 
 const psp= Press_Start_2P({
   display:"swap",
-  subsets: ["latin-ext"],
+  subsets: ["latin"],
   weight: "400",
   preload:true,
+  
   
 });
 

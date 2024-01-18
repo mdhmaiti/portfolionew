@@ -119,10 +119,10 @@ const Project = () => {
 
         <CardContent className="flex flex-row justify-center">
           <Image
-            src="/tagAdd.png"
+            src="/addTag.jpg"
             width={200}
             height={200}
-            alt="my pic"
+            alt="addTag"
             className="rounded-md"
           />
         </CardContent>
