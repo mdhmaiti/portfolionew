@@ -20,7 +20,7 @@ const About = () => {
   // card components
   return (
     <div id="About" className=" ">
-      <div className="flex flex-col justify-justify-center items-center my-5 space-y-10 ">
+      <div className="flex flex-col justify-justify-center items-center my-5 space-y-10 mx-5 ">
         <AnimatedText
           className=" w-full py-4 glow-text font-semibold text-4xl text-center  text-slate-400 md:text-6xl"
           text={" About Me ."}
@@ -31,7 +31,7 @@ const About = () => {
           </CardTitle>
 
           <CardContent>
-            <p className="font-semibold">
+            <p className="font-semibold text-cyan-500">
               {" "}
               I am a developer from India. I can communicate in English, Hindi,
               and Bengali. I graduated in ECE from Burdwan University and
