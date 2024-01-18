@@ -27,7 +27,7 @@ const Home = () => {
       <div className="flex flex-col justify-center  h-full min-w-full space-y-52 overflow-clip ">
         <div className="flex flex-col items-center gap-0 py-3">
           <LucideRocket className="glow animate-bounce" />
-          <AnimatedText className={` text-4xl lg:text-7xl text-center my-2 py-2 px-4 mx-auto rounded-sm  animate-pulse ${psp.className}`}
+          <AnimatedText className={` text-2xl lg:text-7xl text-center my-2 py-2 px-4 mx-auto rounded-sm  animate-pulse ${psp.className}`}
             
             text={"SPACE THEME"}
           />
