@@ -46,7 +46,7 @@ const Project = () => {
     {
       id:6,
       title: "text to speech",
-      imgSrc:"public/txp1.jpg",
+      imgSrc:"/txp1.jpg",
       footerDesc:"fetching the data from the api and using ssml to convert text to speech.",
       liveLink:"https://texttospeech-kappa.vercel.app/", 
     }
