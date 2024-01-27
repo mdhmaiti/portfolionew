@@ -49,6 +49,13 @@ const Project = () => {
       imgSrc:"/txp1.jpg",
       footerDesc:"fetching the data from the api and using ssml to convert text to speech.",
       liveLink:"https://texttospeech-kappa.vercel.app/", 
+    },
+    {
+      id:7,
+      title: "dice game",
+      imgSrc:"/dicegame.jpg",
+      footerDesc:"A two player dice game, that gives random dice number",
+      liveLink:"https://transcendent-daifuku-0a2440.netlify.app", 
     }
   ];
 
