@@ -15,6 +15,31 @@ const metadata: Metadata = {
 };
 
 const About = () => {
+  const skillsName = [
+    { id: 1, title: "React" },
+    { id: 2, title: "Node.js" },
+    { id: 3, title: "Express.js" },
+    { id: 4, title: "MongoDB" },
+    { id: 5, title: "JavaScript (ES6+)" },
+    { id: 6, title: "HTML5" },
+    { id: 7, title: "CSS3" },
+    { id: 8, title: "Tailwind CSS" },
+    { id: 9, title: "React Query" },
+    { id: 10, title: "Recoil" },
+    { id: 11, title: "Next JS" },
+    { id: 12, title: "TypeScript" },
+    { id: 13, title: "PostgreSQL" },
+    { id: 14, title: "Prisma" },
+    { id: 15, title: "Next Auth" },
+    { id: 16, title: "Docker" },
+    { id: 17, title: "Git" },
+    { id: 18, title: "Github" },
+    { id: 19, title: "Java" },
+    { id: 20, title: "AWS" },
+    { id: 21, title: "Adobe Photoshop" },
+    { id: 22, title: "VS code" },
+    { id: 23, title: "WSL" },
+  ];
   //cards details
 
   // card components
@@ -22,7 +47,7 @@ const About = () => {
     <div id="About" className=" ">
       <div className="flex flex-col justify-justify-center items-center my-5 space-y-10 mx-5 ">
         <AnimatedText
-          className=" w-full py-4 glow-text font-semibold text-4xl text-center  text-slate-400 md:text-6xl"
+          className=" w-full py-4 glow-text font-semibold text-4xl text-center  text-lime-400 md:text-6xl  "
           text={" About Me ."}
         />
         <Card className=" p-5 sm:w-40  md:w-96 flex flex-col justify-center bg-transparent backdrop-blur-sm shadow-lg shadow-slate-400 ">
@@ -48,31 +73,10 @@ const About = () => {
           </CardTitle>
 
           <CardContent>
-            <ul className="skill-list">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>JavaScript (ES6+)</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Tailwind CSS</li>
-              <li>React Query</li>
-              <li>Recoil</li>
-              <li>Next JS</li>
-              <li>TypeScript</li>
-              <li>PostgreSQL</li>
-              <li>Prisma</li>
-              <li>Next Auth</li>
-              <li>Docker</li>
-              <li>Git</li>
-              <li>Github</li>
-              <li>Java</li>
-              <li>AWS</li>
-              <li>Adobe Photoshop</li>
-              <li>VS code</li>
-              <li>WSL</li>
-              {/* Add more skills as needed */}
+            <ul className="grid grid-cols-3 gap-2  list-none">
+              {skillsName.map((item: any, index: any) => (
+                <li className=" glow flex items-center justify-center   " key={index}> <p className= " text-white bg-gradient-to-r from-purple-400 rounded-md  border-double border-4 border-spacing-1 border-slate-100 whitespace-normal p-2">{item.title}</p> </li>
+              ))}
             </ul>
           </CardContent>
         </Card>

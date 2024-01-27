@@ -26,11 +26,19 @@ const Home = () => {
 
       <div className="flex flex-col justify-center  h-full min-w-full space-y-52 overflow-clip ">
         <div className="flex flex-col items-center gap-0 py-3">
-          <LucideRocket className="glow animate-bounce" />
-          <AnimatedText className={` text-2xl lg:text-7xl text-center my-2 py-2 px-4 mx-auto rounded-sm  animate-pulse ${psp.className}`}
+          <LucideRocket className="glow animate-bounce text-purple-200" />
+          <div className="relative">
+          <AnimatedText className={` absolute inset-0 z-10 text-2xl lg:text-7xl text-center my-2 py-2 px-4 mx-auto rounded-sm text-purple-400 animate-pulse backdrop-blur-md  ${psp.className}`}
             
             text={"SPACE THEME"}
           />
+          <AnimatedText className={`  text-2xl lg:text-7xl text-center my-2 py-2 px-4 mx-auto rounded-sm text-fuchsia-500 blur-md animate-pulse ${psp.className}`}
+            
+            text={"SPACE THEME"}
+          />
+
+          </div>
+          
         </div>
 
         <div className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center md:space-x-60 ">

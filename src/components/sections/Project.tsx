@@ -62,7 +62,7 @@ const Project = () => {
   return (
     <div id="Projects">
       <AnimatedText
-        className=" w-full py-10 glow-text font-semibold text-4xl text-center  text-slate-400 md:text-6xl"
+        className=" w-full py-10 glow-text font-semibold text-4xl text-center  text-lime-400 md:text-6xl"
         text={" Projects ."}
       />
       <div className="flex items-center justify-center mx-5 ">
