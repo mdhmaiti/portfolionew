@@ -16,7 +16,7 @@ const Project = () => {
     {
       id: 2,
       title: " Threads",
-      imgSrc: "/gmail-linkdin-twitter.jpg",
+      imgSrc: "/CodeDefaultPic.jpg",
       footerDesc:
         " Built with next js server actions and clerk authentication.",
       liveLink: "https://github.com/mdhmaiti",
@@ -24,7 +24,7 @@ const Project = () => {
     {
       id: 3,
       title: "Qr code generator",
-      imgSrc: "/gmail-linkdin-twitter.jpg",
+      imgSrc: "/CodeDefaultPic.jpg",
       footerDesc: " A simple qr code generator",
       liveLink: "https://github.com/mdhmaiti",
     },
@@ -56,6 +56,20 @@ const Project = () => {
       imgSrc:"/dicegame.jpg",
       footerDesc:"A two player dice game, that gives random dice number",
       liveLink:"https://transcendent-daifuku-0a2440.netlify.app", 
+    },
+    {
+      id:8,
+      title: "Url_shorter",
+      imgSrc:"/CodeDefaultPic.jpg",
+      footerDesc:"Express backend for the url shortener ",
+      liveLink:"https://github.com/mdhmaiti/urlShortv1", 
+    },
+    {
+      id:9,
+      title: "autoemail",
+      imgSrc:"/CodeDefaultPic.jpg",
+      footerDesc:"A project that sends automatic email to me",
+      liveLink:"https://autoemail.vercel.app", 
     }
   ];
 
