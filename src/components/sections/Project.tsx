@@ -70,6 +70,13 @@ const Project = () => {
       imgSrc:"/CodeDefaultPic.jpg",
       footerDesc:"A project that sends automatic email to me",
       liveLink:"https://autoemail.vercel.app", 
+    },
+    {
+      id:10,
+      title: "react-firebase",
+      imgSrc:"/reactFirebase2.jpg",
+      footerDesc:"Firebase and Vite Crud and send a valid crypto address to database",
+      liveLink:"https://reactfirebase-dusky.vercel.app", 
     }
   ];
 

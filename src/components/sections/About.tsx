@@ -39,6 +39,9 @@ const About = () => {
     { id: 21, title: "Adobe Photoshop" },
     { id: 22, title: "VS code" },
     { id: 23, title: "WSL" },
+    { id: 24, title: "Firebase" },
+    { id: 25, title: "Zustand" },
+    { id: 26, title: "Vite" },
   ];
   //cards details
 
@@ -75,7 +78,15 @@ const About = () => {
           <CardContent>
             <ul className="grid grid-cols-3 gap-2  list-none">
               {skillsName.map((item: any, index: any) => (
-                <li className=" glow flex items-center justify-center   " key={index}> <p className= " text-white bg-gradient-to-r from-purple-400 rounded-md  border-double border-4 border-spacing-1 border-slate-100 whitespace-normal p-2">{item.title}</p> </li>
+                <li
+                  className=" glow flex items-center justify-center   "
+                  key={index}
+                >
+                  {" "}
+                  <p className=" text-white bg-gradient-to-r from-purple-400 rounded-md  border-double border-4 border-spacing-1 border-slate-100 whitespace-normal p-2">
+                    {item.title}
+                  </p>{" "}
+                </li>
               ))}
             </ul>
           </CardContent>
