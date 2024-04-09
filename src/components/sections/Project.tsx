@@ -77,7 +77,14 @@ const Project = () => {
       imgSrc:"/reactFirebase2.jpg",
       footerDesc:"Firebase and Vite Crud and send a valid crypto address to database",
       liveLink:"https://reactfirebase-dusky.vercel.app", 
-    }
+    },
+    {
+      id:11,
+      title: "Digital-Hippo",
+      imgSrc:"/artshopP.jpg",
+      footerDesc:"website to sell and buy images ",
+      liveLink:"https://artshop-production.up.railway.app", 
+    },
   ];
 
   return (
