@@ -9,7 +9,7 @@ import LoadingComp from "@/components/LoadingComp";
 const roboto = Roboto({
   subsets: ["latin-ext"],
   weight: "400",
-  preload:true,
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -24,19 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-gradient-to-r  from-sky-950 ` }>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className={`${roboto.className} bg-gradient-to-r  from-sky-950 `}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex flex-col min-h-screen min-w-screen ">
-            
-          <div className="fixed w-full inset-0 -z-50">
-    <LoadingComp/>
-    </div>
-    <Navbar />
-    
-    
-    <div className=" fixed inset-0 w-full -z-20">
-          <EarthComponent />
-        </div>
+            <div className="fixed w-full inset-0 -z-50">
+              <LoadingComp />
+            </div>
+            <Navbar />
+
+            <div className=" fixed inset-0 w-full -z-20">
+              <EarthComponent />
+            </div>
 
             <div className="flex-1">{children}</div>
           </div>
